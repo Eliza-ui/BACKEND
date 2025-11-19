@@ -2,7 +2,7 @@ import express from 'express';
 import 'dotenv/config.js';
 import studentRouters from './routers/studentRouters.js';
 import bookRouters from './routers/bookRouters.js';
-
+import userRouters from './routers/UserRoutes.js';
 
 const app = express();
 
@@ -20,3 +20,4 @@ app.listen (process.env.PORT || 3000, () => {
 
 app.use('/book', bookRouters);
 app.use('/student', studentRouters);
+app.use('/user', userRouters)
